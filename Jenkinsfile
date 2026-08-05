@@ -1,7 +1,7 @@
 node {
 
     stage('Checkout') {
-        echo "Checking out source code..."
+        checkout scm
     }
 
     stage('Build') {
@@ -9,11 +9,11 @@ node {
     }
 
     stage('Run Python') {
+        sh 'ls -l'
         sh 'python3 h.py'
     }
 
     stage('Finish') {
         echo "Pipeline Completed Successfully"
     }
-
 }
