@@ -9,7 +9,7 @@ node {
     }
 
     stage('Run Python') {
-        sh 'python3 hello.py'
+        sh 'python3 h.py'
     }
 
     stage('Finish') {
